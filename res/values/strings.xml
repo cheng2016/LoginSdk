@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginSdk</string>
+
+    <string name="dialog_login_title">范特西账号登录</string>
+    <string name="dialog_login_name_hint">请输入手机号</string>
+    <string name="dialog_login_password_hint">请输入密码</string>
+    <string name="dialog_login_password_temp_hint">再次输入密码</string>
+    <string name="dialog_login_code_hint">验证码</string>
+    <string name="dialog_login_button">登录</string>
+
+    <string name="dialog_login_agreement">注册账号表示您同意《范特西用户注册协议》</string>
+</resources>
