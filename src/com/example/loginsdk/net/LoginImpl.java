@@ -8,6 +8,7 @@ import com.example.loginsdk.bean.User;
 import com.example.loginsdk.bean.UserRequest;
 import com.example.loginsdk.util.LogUtils;
 
+import android.content.Context;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -21,26 +22,29 @@ public class LoginImpl {
 
     static volatile LoginImpl sInstance;
     static volatile LoginApi mApiClient;
+    
+    private Context mContext;
 
-    public LoginImpl() {
+    public LoginImpl(Context context) {
+    	this.mContext = context;
     }
 
     public LoginApi getApiClient() {
         if (mApiClient == null) {
             synchronized (this) {
                 LogUtils.i(TAG, "LoginApi.newInstance() excute ");
-                mApiClient = ServiceFactory.createRetrofit2RxJavaService(LoginApi.class,LoginApi.baseurl);
+                mApiClient = ServiceFactory.createRetrofit2RxJavaService(LoginApi.class,LoginApi.baseurl,mContext);
             }
         }
         return mApiClient;
     }
 
     //获取唯一单列
-    public static LoginImpl getInstance() {
+    public static LoginImpl getInstance(Context context) {
         if (sInstance == null) {
             synchronized (LoginImpl.class) {
                 LogUtils.i(TAG, "LoginImpl.newInstance() excute ");
-                sInstance = new LoginImpl();
+                sInstance = new LoginImpl(context);
             }
         }
         return sInstance;

@@ -9,6 +9,7 @@ import com.example.loginsdk.net.LoginApi;
 import com.example.loginsdk.net.LoginImpl;
 import com.example.loginsdk.util.AppUtils;
 import com.example.loginsdk.util.MD5Util;
+import com.example.loginsdk.util.MResource;
 import com.example.loginsdk.util.RegularUtils;
 import com.example.loginsdk.util.T;
 
@@ -55,9 +56,9 @@ public class RegistFragment extends BaseFragment {
         Bundle data = getArguments();
         int orientation = data.getInt("orientation",1);
         if(orientation == AccountManager.PORTRAIT){
-            rootView  = inflater.inflate(R.layout.yyh_fragment_regist,container,false);
+            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_regist"),container,false);
         }else if(orientation == AccountManager.LANDSCAPE){
-            rootView  = inflater.inflate(R.layout.yyh_fragment_regist_l,container,false);
+            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_regist_l"),container,false);
         }
 
         timeCount = new TimeCount(60000, 1000);
@@ -68,14 +69,13 @@ public class RegistFragment extends BaseFragment {
     }
 
     public void initView(){
-        tv_header_back = (TextView) rootView.findViewById(R.id.tv_header_back);
-        btn_code = (Button) rootView.findViewById(R.id.btn_code);
-        phone = (EditText) rootView.findViewById(R.id.phone);
-        verifyCode = (EditText) rootView.findViewById(R.id.verifyCode);
-        password = (EditText) rootView.findViewById(R.id.password);
-        password_temp = (EditText) rootView.findViewById(R.id.password_temp);
-        phone = (EditText) rootView.findViewById(R.id.phone);
-        btn_regist = (Button) rootView.findViewById(R.id.btn_regist);
+        tv_header_back = (TextView) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "tv_header_back"));
+        btn_code = (Button) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "btn_code"));
+        phone = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "phone"));
+        verifyCode = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "verifyCode"));
+        password = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password"));
+        password_temp = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password_temp"));
+        btn_regist = (Button) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "btn_regist"));
     }
 
     public void initEvent(){
@@ -95,7 +95,7 @@ public class RegistFragment extends BaseFragment {
                     T.showShort(getActivity(),"手机号格式有误");
                 }else {
                     showProgressDialog("获取验证码...");
-                    LoginImpl.getInstance().getCode(phoneStr, LoginApi.REGIST);
+                    LoginImpl.getInstance(getActivity()).getCode(phoneStr, LoginApi.REGIST);
                 }
             }
         });
@@ -123,7 +123,7 @@ public class RegistFragment extends BaseFragment {
                 }else{
                     showProgressDialog("注册中...");
                     passwordStr = MD5Util.md5(passwordStr);
-                    LoginImpl.getInstance().regist(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
+                    LoginImpl.getInstance(getActivity()).regist(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
                 }
             }
         });

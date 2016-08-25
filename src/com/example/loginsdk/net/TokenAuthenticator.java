@@ -2,7 +2,6 @@ package com.example.loginsdk.net;
 
 import java.io.IOException;
 
-import com.example.loginsdk.RxApplication;
 import com.example.loginsdk.bean.RefreshRequest;
 import com.example.loginsdk.bean.Token;
 import com.example.loginsdk.util.PreferenceConstants;

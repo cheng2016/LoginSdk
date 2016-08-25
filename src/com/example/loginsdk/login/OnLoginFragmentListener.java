@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
  */
 
 public interface OnLoginFragmentListener {
-    public void login(String account,String password);
+    public void login(String account, String password);
 
     public void exit();
 

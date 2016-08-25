@@ -10,6 +10,7 @@ import com.example.loginsdk.net.LoginImpl;
 import com.example.loginsdk.net.MessageType;
 import com.example.loginsdk.util.LogUtils;
 import com.example.loginsdk.util.MD5Util;
+import com.example.loginsdk.util.MResource;
 import com.example.loginsdk.util.MangoUtils;
 import com.example.loginsdk.util.T;
 
@@ -61,7 +62,8 @@ public class MGLoginActivity extends BaseActivity implements OnLoginFragmentList
         }else{
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
-        setContentView(R.layout.yyh_activity_login);
+        
+        setContentView(MResource.getIdByName(getApplication(), "layout", "yyh_activity_login"));
 //        getSupportActionBar().hide();
 
         this.mLoginCallback = AccountManager.getLoginCallback();
@@ -112,7 +114,7 @@ public class MGLoginActivity extends BaseActivity implements OnLoginFragmentList
     public void login(String account,String password) {
         showProgressDialog("loading...");
         password = MD5Util.md5(password);
-        LoginImpl.getInstance().login(new LoginRequest(account,password));
+        LoginImpl.getInstance(this).login(new LoginRequest(account,password));
     }
 
     @Override
@@ -151,7 +153,7 @@ public class MGLoginActivity extends BaseActivity implements OnLoginFragmentList
         }
         this.currentFragment = fragment;
 
-        fragmentTransaction.replace(R.id.content,fragment).commit();
+        fragmentTransaction.replace(MResource.getIdByName(getApplication(), "id", "content"),fragment).commit();
     }
 
     @Override

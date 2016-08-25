@@ -9,6 +9,7 @@ import com.example.loginsdk.net.LoginApi;
 import com.example.loginsdk.net.LoginImpl;
 import com.example.loginsdk.util.AppUtils;
 import com.example.loginsdk.util.MD5Util;
+import com.example.loginsdk.util.MResource;
 import com.example.loginsdk.util.RegularUtils;
 import com.example.loginsdk.util.T;
 
@@ -55,13 +56,13 @@ public class RetrieveFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Bundle data = getArguments();
         int orientation = data.getInt("orientation",1);
+        
         if(orientation == AccountManager.PORTRAIT){
-            rootView  = inflater.inflate(R.layout.yyh_fragment_retrieve,container,false);
+            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_retrieve"),container,false);
         }else if(orientation == AccountManager.LANDSCAPE){
-            rootView  = inflater.inflate(R.layout.yyh_fragment_retrieve_l,container,false);
+            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_retrieve_l"),container,false);
         }
-
-        timeCount = new RetrieveFragment.TimeCount(60000, 1000);
+        timeCount = new TimeCount(60000, 1000);
         initView();
         initEvent();
 
@@ -69,14 +70,22 @@ public class RetrieveFragment extends BaseFragment {
     }
 
     public void initView(){
-        tv_header_back = (TextView) rootView.findViewById(R.id.tv_header_back);
-        btn_code = (Button) rootView.findViewById(R.id.btn_code);
-        phone = (EditText) rootView.findViewById(R.id.phone);
-        verifyCode = (EditText) rootView.findViewById(R.id.verifyCode);
-        password = (EditText) rootView.findViewById(R.id.password);
-        password_temp = (EditText) rootView.findViewById(R.id.password_temp);
-        phone = (EditText) rootView.findViewById(R.id.phone);
-        btn_confirm = (Button) rootView.findViewById(R.id.btn_confirm);
+        tv_header_back = (TextView) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "tv_header_back"));
+        btn_code = (Button) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "btn_code"));
+        phone = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "phone"));
+        verifyCode = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "verifyCode"));
+        password = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password"));
+        password_temp = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password_temp"));
+        btn_confirm = (Button) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "btn_confirm"));
+
+    	
+//        tv_header_back = (TextView) rootView.findViewById(R.id.tv_header_back);
+//        btn_code = (Button) rootView.findViewById(R.id.btn_code);
+//        phone = (EditText) rootView.findViewById(R.id.phone);
+//        verifyCode = (EditText) rootView.findViewById(R.id.verifyCode);
+//        password = (EditText) rootView.findViewById(R.id.password);
+//        password_temp = (EditText) rootView.findViewById(R.id.password_temp);
+//        btn_confirm = (Button) rootView.findViewById(R.id.btn_confirm);
     }
 
     public void initEvent(){
@@ -96,7 +105,7 @@ public class RetrieveFragment extends BaseFragment {
                     T.showShort(getActivity(),"手机号格式有误");
                 }else {
                     showProgressDialog("获取中...");
-                    LoginImpl.getInstance().getCode(phoneStr,LoginApi.RETRIEVE);
+                    LoginImpl.getInstance(getActivity()).getCode(phoneStr,LoginApi.RETRIEVE);
                 }
             }
         });
@@ -124,7 +133,7 @@ public class RetrieveFragment extends BaseFragment {
                 }else{
                     showProgressDialog("修改中...");
                     passwordStr = MD5Util.md5(passwordStr);
-                    LoginImpl.getInstance().retrieve(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
+                    LoginImpl.getInstance(getActivity()).retrieve(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
                 }
             }
         });
