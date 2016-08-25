@@ -88,7 +88,6 @@ public class RegistFragment extends BaseFragment {
         btn_code.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppUtils.hideKeyWord(getActivity(),v);
                 String phoneStr = phone.getText().toString();
                 if(TextUtils.isEmpty(phoneStr)){
                     T.showShort(getActivity(),"账户不能为空");

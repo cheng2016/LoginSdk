@@ -27,7 +27,7 @@ public interface LoginApi {
     @POST("user/getProfile")
     Observable<JsonResult<User>> getProfile(@Header("X-ZUMO-AUTH") String accessToken);
 
-    @POST("user/getCode")
+    @POST("user/code")
     Observable<JsonResult> getCode(@Query("phone") String phone,@Query("type") String type);
 
     @POST("user/regist")

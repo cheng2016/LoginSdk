@@ -13,8 +13,8 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7

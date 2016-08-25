@@ -54,7 +54,7 @@ public class AppUtils {
     public static void hideKeyWord(Context context,View view){
         InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
         if(imm.isActive()){
-            imm.hideSoftInputFromInputMethod(view.getWindowToken(),0);
+            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         }
     }
 
