@@ -7,12 +7,8 @@ import android.app.Activity;
  */
 
 public class MangoSdk {
-
     public static void login(Activity activity, LoginCallback loginCallback) {
-
         AccountManager.setLoginCallback(loginCallback);
         AccountManager.openYYHLoginActivity(activity);
-//        LoginDialog loginDialog = new LoginDialog(activity,loginCallback);
-//        loginDialog.show();
     }
 }

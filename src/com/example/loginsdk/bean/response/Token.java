@@ -1,4 +1,4 @@
-package com.example.loginsdk.bean;
+package com.example.loginsdk.bean.response;
 
 /**
  * Created by WH1604025 on 2016/6/7.

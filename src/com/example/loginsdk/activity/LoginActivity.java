@@ -1,9 +1,11 @@
 package com.example.loginsdk.activity;
 
 import com.example.loginsdk.R;
-import com.example.loginsdk.bean.User;
+import com.example.loginsdk.bean.Account;
+import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.login.LoginCallback;
 import com.example.loginsdk.login.MangoSdk;
+import com.example.loginsdk.net.LoginImpl;
 import com.example.loginsdk.util.T;
 
 import android.app.Activity;
@@ -29,11 +31,11 @@ public class LoginActivity extends BaseActivity {
     }
 
     public void showDialog(View view){
-        MangoSdk.login(this, new LoginCallback<User>() {
+        MangoSdk.login(this, new LoginCallback<Account>() {
             @Override
-            public void onLoginSuccess(Activity activity, User user) {
+            public void onLoginSuccess(Activity activity, Account user) {
                 T.showShort(LoginActivity.this,"登录成功！");
-                mTextView.setText(user.getUserPhone());
+                LoginImpl.getInstance(activity).checkLogin(user);
             }
 
             @Override
@@ -62,5 +64,11 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void onEventMainThread(Object event) {
         super.onEventMainThread(event);
+        if(event instanceof JsonResult){
+            JsonResult jsonResult = (JsonResult) event;
+           if(jsonResult.getMessage().equals("checkLogin")) {
+                T.showShort(LoginActivity.this,"checkLogin is success");
+            }
+        }
     }
 }

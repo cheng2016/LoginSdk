@@ -19,6 +19,9 @@ public final class MessageType{
     public final static int RETRIEVE = 4;
     public final static int GETCODE = 5;
 
+    public final static int QQLOGIN = 6;
+    public final static int CHECKLOGIN = 6;
+
     //组合模式处理请求网络错误，然而很多个请求的情况下存在效率问题，思考！
     public static void handlerNetWorkException(Context context, Object event){
         if(event instanceof FailedEvent){

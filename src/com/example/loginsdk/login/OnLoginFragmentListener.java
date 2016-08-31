@@ -12,4 +12,6 @@ public interface OnLoginFragmentListener {
     public void exit();
 
     public void startFragment(Fragment fragment);
+
+    public void qqLogin();
 }

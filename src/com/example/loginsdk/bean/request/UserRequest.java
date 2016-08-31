@@ -1,4 +1,4 @@
-package com.example.loginsdk.bean;
+package com.example.loginsdk.bean.request;
 
 /**
  * Created by mitnick.cheng on 2016/8/24.

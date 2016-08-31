@@ -2,13 +2,19 @@ package com.example.loginsdk.login;
 
 import com.example.loginsdk.R;
 import com.example.loginsdk.activity.BaseFragment;
+import com.example.loginsdk.net.LoginImpl;
 import com.example.loginsdk.util.AppUtils;
+import com.example.loginsdk.util.LogUtils;
 import com.example.loginsdk.util.MResource;
+import com.example.loginsdk.util.PreferenceConstants;
+import com.example.loginsdk.util.PreferenceUtils;
 import com.example.loginsdk.util.RegularUtils;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,6 +24,18 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.loginsdk.util.T;
+import com.example.loginsdk.util.Util;
+import com.example.loginsdk.wxapi.WXEntryActivity;
+import com.tencent.connect.common.Constants;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.SendAuth;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
+import com.tencent.tauth.UiError;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by mitnick.cheng on 2016/8/15.
@@ -37,6 +55,15 @@ public class LoginFragment extends BaseFragment {
 	private TextView quick_login, regist, retrieve_password;
 
 	private EditText userNameEdit, passwordEdit;
+
+	private ImageView qq_login,wx_login;
+
+	// IWXAPI 是第三方app和微信通信的openapi接口
+	private IWXAPI mWeixinAPI;
+
+	//第三方qq登录
+	public static Tencent mTencent;
+	public static String APP_ID = "1105653748";
 
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,6 +96,19 @@ public class LoginFragment extends BaseFragment {
 		
 		userNameEdit = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "username"));
 		passwordEdit = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password"));
+
+		wx_login = (ImageView) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "wx_login"));
+		qq_login = (ImageView) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "qq_login"));
+
+		String account = PreferenceUtils.getPrefString(getActivity(), PreferenceConstants.ACCOUNT,"");
+		String password = PreferenceUtils.getPrefString(getActivity(), PreferenceConstants.PASSWORD,"");
+
+		if(!TextUtils.isEmpty(account)){
+			userNameEdit.setText(account);
+		}
+		if(!TextUtils.isEmpty(password)){
+			passwordEdit.setText(password);
+		}
 
 		initEvent();
 		return rootView;
@@ -123,6 +163,33 @@ public class LoginFragment extends BaseFragment {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				onLoginFragmentListener.startFragment(new RetrieveFragment());
+			}
+		});
+
+		wx_login.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (mWeixinAPI == null) {
+					mWeixinAPI = WXAPIFactory.createWXAPI(getActivity(), WXEntryActivity.WX_APP_ID, false);
+				}
+
+				if (!mWeixinAPI.isWXAppInstalled()) {
+					//提醒用户没有按照微信
+					return;
+				}
+				mWeixinAPI.registerApp(WXEntryActivity.WX_APP_ID);
+
+				SendAuth.Req req = new SendAuth.Req();
+				req.scope = "snsapi_userinfo";
+				req.state = "none";
+				mWeixinAPI.sendReq(req);
+			}
+		});
+
+		qq_login.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				onLoginFragmentListener.qqLogin();
 			}
 		});
 	}

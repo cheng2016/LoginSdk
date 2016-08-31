@@ -1,4 +1,6 @@
-package com.example.loginsdk.bean;
+package com.example.loginsdk.bean.response;
+
+import com.example.loginsdk.bean.ErrorCode;
 
 /**
  * @author zhenbiao.cai

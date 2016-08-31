@@ -83,7 +83,6 @@
                 android:textSize="14dp" />
 
             <LinearLayout
-                android:visibility="invisible"
                 android:id="@+id/third_login_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,7 +113,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/third_login_container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -132,18 +130,19 @@
                     android:src="@drawable/yyh_login_qq" />
 
                 <ImageView
-                    android:id="@+id/weibo_login"
+                    android:id="@+id/wx_login"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:background="@null"
-                    android:src="@drawable/yyh_login_weibo" />
+                    android:visibility="gone"
+                    android:src="@drawable/ipay_icon_paytype_weixin" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/third_login_container"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal" >
 
                 <TextView

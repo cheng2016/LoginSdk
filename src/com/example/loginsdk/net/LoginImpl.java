@@ -2,10 +2,10 @@ package com.example.loginsdk.net;
 
 import org.greenrobot.eventbus.EventBus;
 
-import com.example.loginsdk.bean.JsonResult;
-import com.example.loginsdk.bean.LoginRequest;
-import com.example.loginsdk.bean.User;
-import com.example.loginsdk.bean.UserRequest;
+import com.example.loginsdk.bean.Account;
+import com.example.loginsdk.bean.response.JsonResult;
+import com.example.loginsdk.bean.request.LoginRequest;
+import com.example.loginsdk.bean.request.UserRequest;
 import com.example.loginsdk.util.LogUtils;
 
 import android.content.Context;
@@ -29,7 +29,7 @@ public class LoginImpl {
     	this.mContext = context;
     }
 
-    public LoginApi getApiClient() {
+    private LoginApi getApiClient() {
         if (mApiClient == null) {
             synchronized (this) {
                 LogUtils.i(TAG, "LoginApi.newInstance() excute ");
@@ -50,6 +50,16 @@ public class LoginImpl {
         return sInstance;
     }
 
+    private LoginApi getHttpsClient() {
+        if (mApiClient == null) {
+            synchronized (this) {
+                LogUtils.i(TAG, "LoginApi.newInstance() excute ");
+                mApiClient = ServiceFactory.createSSLService(LoginApi.class,"https://api.weixin.qq.com/",mContext);
+            }
+        }
+        return mApiClient;
+    }
+
     private final void postEvent(Object object) {
         EventBus.getDefault().post(object);
     }
@@ -58,7 +68,7 @@ public class LoginImpl {
         getApiClient().login(loginRequest)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<JsonResult<User>>() {
+                .subscribe(new Observer<JsonResult<Account>>() {
                     @Override
                     public void onCompleted() {
 
@@ -70,7 +80,7 @@ public class LoginImpl {
                     }
 
                     @Override
-                    public void onNext(JsonResult<User> jsonResult) {
+                    public void onNext(JsonResult<Account> jsonResult) {
                         if(jsonResult.isSuccess()){
                             postEvent(jsonResult);
                         }else{
@@ -158,4 +168,55 @@ public class LoginImpl {
                 });
     }
 
+    public void qqLogin(String userName){
+        getApiClient().qqLogin(userName)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<JsonResult<Account>>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        postEvent(new FailedEvent(MessageType.QQLOGIN ,throwable.getMessage()));
+                    }
+
+                    @Override
+                    public void onNext(JsonResult<Account> jsonResult) {
+                        if(jsonResult.isSuccess()){
+                            postEvent(jsonResult);
+                        }else{
+                            postEvent(new FailedEvent(MessageType.QQLOGIN ,jsonResult.getMessage()));
+                        }
+                    }
+                });
+    }
+
+    public void checkLogin(Account account){
+        getApiClient().checkLogin(account)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<JsonResult>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        postEvent(new FailedEvent(MessageType.CHECKLOGIN ,throwable.getMessage()));
+                    }
+
+                    @Override
+                    public void onNext(JsonResult jsonResult) {
+                        if(jsonResult.isSuccess()){
+                            postEvent(jsonResult);
+                        }else{
+                            postEvent(new FailedEvent(MessageType.CHECKLOGIN ,jsonResult.getMessage()));
+                        }
+                    }
+                });
+    }
 }

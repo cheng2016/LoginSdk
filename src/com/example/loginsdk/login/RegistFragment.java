@@ -1,9 +1,8 @@
 package com.example.loginsdk.login;
 
-import com.example.loginsdk.R;
 import com.example.loginsdk.activity.BaseFragment;
-import com.example.loginsdk.bean.JsonResult;
-import com.example.loginsdk.bean.UserRequest;
+import com.example.loginsdk.bean.response.JsonResult;
+import com.example.loginsdk.bean.request.UserRequest;
 import com.example.loginsdk.net.FailedEvent;
 import com.example.loginsdk.net.LoginApi;
 import com.example.loginsdk.net.LoginImpl;

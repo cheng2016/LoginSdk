@@ -80,7 +80,6 @@
         android:layout_below="@id/login"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical"
-        android:visibility="invisible"
         android:orientation="horizontal" >
 
         <View
@@ -111,7 +110,6 @@
         android:layout_below="@id/third_login_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:visibility="gone"
         android:orientation="horizontal" >
 
         <ImageView
@@ -123,17 +121,19 @@
             android:src="@drawable/yyh_login_qq" />
 
         <ImageView
-            android:id="@+id/weibo_login"
+            android:visibility="gone"
+            android:id="@+id/wx_login"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@null"
-            android:src="@drawable/yyh_login_weibo" />
+            android:src="@drawable/ipay_icon_paytype_weixin" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/third_login_container"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
         <TextView

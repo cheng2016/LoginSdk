@@ -1,6 +1,6 @@
 package com.example.loginsdk.login;
 
-import com.example.loginsdk.bean.User;
+import com.example.loginsdk.bean.response.User;
 
 import android.app.Activity;
 

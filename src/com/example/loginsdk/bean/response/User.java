@@ -1,4 +1,4 @@
-package com.example.loginsdk.bean;
+package com.example.loginsdk.bean.response;
 
 import java.util.Date;
 

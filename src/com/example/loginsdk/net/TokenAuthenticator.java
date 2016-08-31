@@ -2,16 +2,10 @@ package com.example.loginsdk.net;
 
 import java.io.IOException;
 
-import com.example.loginsdk.bean.RefreshRequest;
-import com.example.loginsdk.bean.Token;
-import com.example.loginsdk.util.PreferenceConstants;
-import com.example.loginsdk.util.PreferenceUtils;
-
 import okhttp3.Authenticator;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.Route;
-import retrofit2.Call;
 
 /**
  * Created by Michael Smith on 2016/7/30.
