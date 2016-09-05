@@ -1,11 +1,12 @@
-package com.example.loginsdk.activity;
+package com.example.loginsdk;
 
-import com.example.loginsdk.R;
+import com.example.loginsdk.activity.BaseActivity;
 import com.example.loginsdk.bean.Account;
 import com.example.loginsdk.bean.response.JsonResult;
-import com.example.loginsdk.login.LoginCallback;
-import com.example.loginsdk.login.MangoSdk;
+import com.example.loginsdk.listener.LoginCallback;
+import com.example.loginsdk.controller.MangoSdk;
 import com.example.loginsdk.net.LoginImpl;
+import com.example.loginsdk.util.ResUtils;
 import com.example.loginsdk.util.T;
 
 import android.app.Activity;
@@ -23,18 +24,26 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void initView() {
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // 设置全屏
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login);
-        mTextView = (TextView) findViewById(R.id.textView);
+        ResUtils.setPkgName(this.getPackageName());
+        setContentView(ResUtils.getLayout("activity_login"));
+        mTextView = (TextView) findViewById(ResUtils.getId("textView"));
+        mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLoginDialog("thirdLogin............");
+                LoginImpl.getInstance(LoginActivity.this).thirdLogin("my_ftx","1313123123");
+            }
+        });
     }
 
     public void showDialog(View view){
         MangoSdk.login(this, new LoginCallback<Account>() {
             @Override
             public void onLoginSuccess(Activity activity, Account user) {
-                T.showShort(LoginActivity.this,"登录成功！");
                 LoginImpl.getInstance(activity).checkLogin(user);
             }
 
@@ -64,10 +73,14 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void onEventMainThread(Object event) {
         super.onEventMainThread(event);
+        dismissDialog();
         if(event instanceof JsonResult){
             JsonResult jsonResult = (JsonResult) event;
            if(jsonResult.getMessage().equals("checkLogin")) {
                 T.showShort(LoginActivity.this,"checkLogin is success");
+            }
+            if(jsonResult.getMessage().equals("thirdLogin")) {
+                T.showShort(LoginActivity.this,"thirdLogin is success");
             }
         }
     }

@@ -1,8 +1,8 @@
-package com.example.loginsdk.login;
+package com.example.loginsdk.fragment;
 
-import com.example.loginsdk.activity.BaseFragment;
 import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.bean.request.UserRequest;
+import com.example.loginsdk.listener.OnLoginFragmentListener;
 import com.example.loginsdk.net.FailedEvent;
 import com.example.loginsdk.net.LoginApi;
 import com.example.loginsdk.net.LoginImpl;
@@ -10,8 +10,10 @@ import com.example.loginsdk.util.AppUtils;
 import com.example.loginsdk.util.MD5Util;
 import com.example.loginsdk.util.MResource;
 import com.example.loginsdk.util.RegularUtils;
+import com.example.loginsdk.util.ResUtils;
 import com.example.loginsdk.util.T;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -27,7 +29,7 @@ import android.widget.TextView;
  * Created by mitnick.cheng on 2016/8/16.
  */
 
-public class RegistFragment extends BaseFragment {
+public class RetrieveFragment extends BaseFragment {
     private OnLoginFragmentListener onLoginFragmentListener;
     public void setOnLoginFragmentListener(OnLoginFragmentListener onLoginFragmentListener) {
         this.onLoginFragmentListener = onLoginFragmentListener;
@@ -36,14 +38,15 @@ public class RegistFragment extends BaseFragment {
     private View rootView;
     private TextView tv_header_back;
 
-    private Button btn_code,btn_regist;
+    private Button btn_code,btn_confirm;
     private EditText phone,verifyCode,password,password_temp;
 
     private CountDownTimer timeCount;
 
     private String token = "";
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if(this.onLoginFragmentListener == null)
             throw new RuntimeException("onLoginFragmentListener can not null");
@@ -51,15 +54,15 @@ public class RegistFragment extends BaseFragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Bundle data = getArguments();
         int orientation = data.getInt("orientation",1);
-        if(orientation == AccountManager.PORTRAIT){
-            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_regist"),container,false);
-        }else if(orientation == AccountManager.LANDSCAPE){
-            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_regist_l"),container,false);
+        
+        if(orientation == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_retrieve_l"),container,false);
+        }else{
+            rootView  = inflater.inflate(MResource.getIdByName(getActivity().getApplication(), "layout", "yyh_fragment_retrieve"),container,false);
         }
-
         timeCount = new TimeCount(60000, 1000);
         initView();
         initEvent();
@@ -68,13 +71,22 @@ public class RegistFragment extends BaseFragment {
     }
 
     public void initView(){
-        tv_header_back = (TextView) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "tv_header_back"));
-        btn_code = (Button) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "btn_code"));
-        phone = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "phone"));
-        verifyCode = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "verifyCode"));
-        password = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password"));
-        password_temp = (EditText) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "password_temp"));
-        btn_regist = (Button) rootView.findViewById(MResource.getIdByName(getActivity().getApplication(), "id", "btn_regist"));
+    	tv_header_back = (TextView) rootView.findViewById(ResUtils.getId("tv_header_back"));
+        btn_code = (Button) rootView.findViewById(ResUtils.getId("btn_code"));
+        phone = (EditText) rootView.findViewById(ResUtils.getId("phone"));
+        verifyCode = (EditText) rootView.findViewById(ResUtils.getId("verifyCode"));
+        password = (EditText) rootView.findViewById(ResUtils.getId("password"));
+        password_temp = (EditText) rootView.findViewById(ResUtils.getId("password_temp"));
+        btn_confirm = (Button) rootView.findViewById(ResUtils.getId("btn_confirm"));
+
+    	
+//        tv_header_back = (TextView) rootView.findViewById(R.id.tv_header_back);
+//        btn_code = (Button) rootView.findViewById(R.id.btn_code);
+//        phone = (EditText) rootView.findViewById(R.id.phone);
+//        verifyCode = (EditText) rootView.findViewById(R.id.verifyCode);
+//        password = (EditText) rootView.findViewById(R.id.password);
+//        password_temp = (EditText) rootView.findViewById(R.id.password_temp);
+//        btn_confirm = (Button) rootView.findViewById(R.id.btn_confirm);
     }
 
     public void initEvent(){
@@ -93,13 +105,13 @@ public class RegistFragment extends BaseFragment {
                 }else if(!RegularUtils.isMobile(phoneStr)){
                     T.showShort(getActivity(),"手机号格式有误");
                 }else {
-                    showProgressDialog("获取验证码...");
-                    LoginImpl.getInstance(getActivity()).getCode(phoneStr, LoginApi.REGIST);
+                    showProgressDialog("获取中...");
+                    LoginImpl.getInstance(getActivity()).getCode(phoneStr,LoginApi.RETRIEVE);
                 }
             }
         });
 
-        btn_regist.setOnClickListener(new View.OnClickListener(){
+        btn_confirm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 AppUtils.hideKeyWord(getActivity(),v);
@@ -120,9 +132,9 @@ public class RegistFragment extends BaseFragment {
                 }else if(!passwordStr.equals(passwordTempStr)){
                     T.showShort(getActivity(),"二次密码不一致");
                 }else{
-                    showProgressDialog("注册中...");
+                    showProgressDialog("修改中...");
                     passwordStr = MD5Util.md5(passwordStr);
-                    LoginImpl.getInstance(getActivity()).regist(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
+                    LoginImpl.getInstance(getActivity()).retrieve(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
                 }
             }
         });
@@ -135,8 +147,8 @@ public class RegistFragment extends BaseFragment {
         if(event instanceof JsonResult){
             JsonResult jsonResult = (JsonResult) event;
             String message = jsonResult.getMessage();
-            if(message.equals(LoginApi.REGIST)){
-                T.showShort(getActivity(),"注册成功");
+            if(message.equals(LoginApi.RETRIEVE)){
+                T.showShort(getActivity(),"修改成功");
                 onLoginFragmentListener.exit();
             }else if(message.equals("getCode")){
                 timeCount.start();
@@ -174,5 +186,13 @@ public class RegistFragment extends BaseFragment {
             btn_code.setEnabled(false);
             btn_code.setText("在" + millisUntilFinished / 1000 + "秒");
         }
+    }
+
+    public static RetrieveFragment newInstance(int var0) {
+        RetrieveFragment var1 = new RetrieveFragment();
+        Bundle var2;
+        (var2 = new Bundle()).putInt("orientation", var0);
+        var1.setArguments(var2);
+        return var1;
     }
 }

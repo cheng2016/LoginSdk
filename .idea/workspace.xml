@@ -6,15 +6,82 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="mango" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0711cb4b-10e9-4ac0-b5ba-4d1e536e466a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/mta-sdk-1.6.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/open_sdk_r5756.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/Account.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/LoginActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/activity/MGLoginActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/controller/MGCommitDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/fragment/BaseFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/fragment/LoginFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/fragment/QuickLoginFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/fragment/RegistFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/fragment/RetrieveFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/listener/BaseUiListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/listener/LoginCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/listener/OnLoginFragmentListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/listener/UserInfoUiLIstener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsApi.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/util/Constant.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/adapter_rxjava_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/android_support_v4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/classes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/converter_gson_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/eventbus_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/libammsdk.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/logging_interceptor_3_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mta_sdk_1_6_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okhttp_3_4_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okio_1_9_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/open_sdk_r5756.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/retrofit_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxjava_1_1_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/activity/BaseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/activity/BaseFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/activity/LoginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/Account.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/ErrorCode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/request/LoginRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/request/RefreshRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/request/UserRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/response/JsonResult.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/response/TencentInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/response/Token.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/bean/response/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/util/GlobalUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/LoginCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/LoginFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/MGLoginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/OnLoginFragmentListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/QuickLoginFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/RegistFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/login/RetrieveFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/RxApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/net/FailedEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/net/LoginApi.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/net/TokenAuthenticator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/AppUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/DeviceUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/DimenUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/EncryptUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/MD5Util.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/MResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/MangoUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/NetUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/PhoneUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/PreferenceConstants.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/PreferenceUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/RegularUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/ScreenUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/T.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/util/Util.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/loginsdk/wxapi/WXEntryActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/LoginImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/MessageType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/ServiceFactory.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -22,34 +89,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileReleaseJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_compileReleaseJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoginSdk.iml" afterPath="$PROJECT_DIR$/LoginSdk.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/yyh_dialog_login.xml" afterPath="$PROJECT_DIR$/res/layout/yyh_dialog_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/yyh_fragment_login.xml" afterPath="$PROJECT_DIR$/res/layout/yyh_fragment_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml" afterPath="$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/activity/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/AccountManager.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/AccountManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/LoginFragment.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/LoginFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/MGLoginActivity.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/MGLoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/MangoSdk.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/MangoSdk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/OnLoginFragmentListener.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/OnLoginFragmentListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/RegistFragment.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/RegistFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/RetrieveFragment.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/login/RetrieveFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/net/LoginApi.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/net/LoginApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/net/LoginImpl.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/net/LoginImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/net/MessageType.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/net/MessageType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/net/ServiceFactory.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/net/ServiceFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/net/TokenAuthenticator.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/net/TokenAuthenticator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/bean/JsonResult.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/JsonResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/bean/LoginRequest.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/request/LoginRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/bean/RefreshRequest.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/request/RefreshRequest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/bean/Token.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/Token.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/bean/User.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/bean/UserRequest.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/bean/request/UserRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/yyh_styles.xml" afterPath="$PROJECT_DIR$/res/values/yyh_styles.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/AccountManager.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/controller/AccountManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/login/MangoSdk.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/controller/MangoSdk.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/example/loginsdk/util/LogUtils.java" afterPath="$PROJECT_DIR$/src/com/example/loginsdk/util/L.java" />
     </list>
     <ignored path="LoginSdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -130,14 +186,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/LoginApi.java">
+      <file leaf-file-name="AccountManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/controller/AccountManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,100 +199,94 @@
       <file leaf-file-name="BaseActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/activity/BaseActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/LoginImpl.java">
+      <file leaf-file-name="BaseFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/fragment/BaseFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3116">
-              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-              <folding>
-                <element signature="e#1854#1855#0" expanded="true" />
-                <element signature="e#1904#1905#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/MessageType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="22" column="38" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="38" />
+            <state relative-caret-position="152">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/LoginFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yyh_fragment_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/yyh_fragment_login.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="2451">
-              <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yyh_fragment_login_l.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="136" column="44" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="44" />
+            <state relative-caret-position="713">
+              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="WXEntryActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/joyegame/ftxkos/ydmm/wxapi/WXEntryActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MGLoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/MGLoginActivity.java">
+      <file leaf-file-name="HttpsUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3667">
-              <caret line="232" column="27" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
+            <state relative-caret-position="171">
+              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/Constant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/activity/LoginActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="1235">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MangoSdk.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/controller/MangoSdk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+      <file leaf-file-name="MGCommitDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/controller/MGCommitDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-              <folding>
-                <marker date="1472557978488" expanded="true" signature="849:1318" ph="/*...*/" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,8 +301,8 @@
     </option>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="C:\android.jks" />
-    <option name="KEY_ALIAS" value="alias" />
+    <option name="KEY_STORE_PATH" value="E:\mitnick.cheng\git_work\LoginSdk\phiau.keystore" />
+    <option name="KEY_ALIAS" value="phiau.keystore" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
@@ -917,7 +965,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="1472524950489" />
-        <entry key="E:\mitnick.cheng\git_work\LoginSdk" value="1472557978488" />
+        <entry key="E:\mitnick.cheng\git_work\LoginSdk" value="1473055897307" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -932,13 +980,13 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/2.2.0-beta3/a537a445943f209f61ce445a661e2fd75f15135a/gradle-2.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/2.2.0-beta3/5590473cdbfa304baa285e6e99d7c4a4f8bcc9c6/gradle-core-2.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/2.2.0-beta3/9b2777692c94d3ae3edd72c7c5db04d2fa6a619a/builder-2.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/25.2.0-beta3/1868e2c1529fd9b7d90a8c6aa09f4ce5759af037/lint-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/2.2.0-rc1/e4d5e9cf66a31550ad1aa01b8293cc4cc5f7bb54/gradle-2.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-core/2.2.0-rc1/c30f57d937a2c42e178eb303aad756545755b06d/gradle-core-2.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/2.2.0-rc1/815130523dba92baad8a6102fd8f66382a99d957/builder-2.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/25.2.0-rc1/896aefdabf4804e07d327a4c3414a21676a71d3b/lint-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/2.2.0-beta3/8444bc1cbc23caf2cd170815a42b1d5dab8240da/gradle-api-2.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/compilerCommon/2.2.0-beta3/aa67f6c1da3de9c8a67c27c70b3bcb3c578e597e/compilerCommon-2.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/2.2.0-rc1/a7318530c2729cb88ebc282e7c8c7b5833471e9d/gradle-api-2.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/compilerCommon/2.2.0-rc1/57dac5e8b682a52fad4cc4ada7cd9a7a760dc8ff/compilerCommon-2.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.2.1/proguard-gradle-5.2.1-sources.jar" />
@@ -948,18 +996,18 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr/3.5.2/antlr-3.5.2.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/2.2.0-beta3/7bdbca0ab47e4cc1771637be1bd5d3a46eb79532/builder-model-2.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/2.2.0-beta3/4ff2bf220576c5a1cbd67b6a6513f804f3e8024d/builder-test-api-2.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/25.2.0-beta3/d311ee8651765a794dc7e744d15754651789a258/sdklib-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/25.2.0-beta3/585db5cfceee215c7b164d58e77cbad85002a5af/sdk-common-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/25.2.0-beta3/6a4dea1e125c25a57ac8d50ff3dd1910b70f88d8/common-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/25.2.0-beta3/90359a5abb1a450348448540747977c75249d751/manifest-merger-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/25.2.0-beta3/200347178b485f02d44f04ed0523651bad64700c/ddmlib-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/2.2.0-rc1/b758e5df8c2eeb0701bc6c4bfc1511c790e60914/builder-model-2.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/2.2.0-rc1/da0ec9b735891e7f4f811aa3b946d5255df78bd/builder-test-api-2.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/25.2.0-rc1/2310c77af05984d60b0958bfe20907f434a1b0b7/sdklib-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/25.2.0-rc1/a49e60f4d0d6238d9b96d9c5cc3d6b742bbeb2e5/sdk-common-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/common/25.2.0-rc1/b186013ea16e507cb487e7e375213f2e3e76bd65/common-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/25.2.0-rc1/7567e565babad098f0270f7a39013c23742206a4/manifest-merger-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/25.2.0-rc1/6728955e12d3a1aca670e003fe9773848cbf9ff5/ddmlib-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.11.0/jack-api-0.11.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jill/jill-api/0.10.0/jill-api-0.10.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/25.2.0-beta3/6c403a55faa5421759c889d3e4eadc14690286db/protos-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/25.2.0-beta3/7e53a6e61fc55a560769f79f85820d626313667f/shared-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/25.2.0-beta3/328386efba02ad261374454c08ce671047056a57/tracker-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/25.2.0-rc1/5a104dd1babaa5e0ce231e78c3655ee2362cc8c6/protos-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/25.2.0-rc1/7495544ad50384936103e4def248e55d8f94812b/shared-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/tracker/25.2.0-rc1/2cc43f2ec86231747ccaa4607b90128d81fb7bab/tracker-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48-sources.jar" />
@@ -967,24 +1015,24 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/25.2.0-beta3/3edd2caaa01be41e030e1c23753c14909ab7075d/lint-checks-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/25.2.0-rc1/83d84b5d3b3d2f8496feeaae86370928495d650/lint-checks-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.5.1/ecj-4.5.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/2.2.0-beta3/f81da8cc18039aa40e790876de3a7a49dec874dd/baseLibrary-2.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/2.2.0-rc1/d821816fcc1b0280e73800fec237fbd7f8aca4c7/baseLibrary-2.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/25.2.0-beta3/9fa86b1df6141bc6cb25fed30d83d0e5d52d3495/annotations-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/25.2.0-rc1/cb5c7cce43ce6f3040efc59ee704f5b277e53434/annotations-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.2.1/proguard-base-5.2.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.2.1/proguard-base-5.2.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/ST4/4.0.8/ST4-4.0.8.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/25.2.0-beta3/e6eef7eb21ffc8db1b236003d076a297f56988d0/layoutlib-api-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/25.2.0-beta3/4d7baf3360d0df5b9f02275975fa7405e37e4d36/dvlib-25.2.0-beta3.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/25.2.0-beta3/8d65ac2018d6b5b71c64232392c6dd4c87e3dde7/repository-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/25.2.0-rc1/ae4e905e66a0e05846d5f53741f6a9997da8fba2/layoutlib-api-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/25.2.0-rc1/ee26f058a4e0facfa60aaceb31ead661641052ec/dvlib-25.2.0-rc1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools/repository/25.2.0-rc1/75b5817929caf84f35155e5d52524da350ad7d78/repository-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1-sources.jar" />
@@ -995,7 +1043,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/25.2.0-beta3/fd1d292768077334017bf99f5a4466d446fd4487/lint-api-25.2.0-beta3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/25.2.0-rc1/ed8cafb50a2f459ace59030db82bf0959a7ae14a/lint-api-25.2.0-rc1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.0.4/asm-analysis-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
@@ -1163,43 +1211,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/AppUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/RegistFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/RetrieveFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/SLSocketFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/SSLSocketFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/ServiceFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/OnLoginFragmentListener.java" />
-        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/BaseUiListener.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/UserInfoUiLIstener.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/MangoSdk.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/wxapi/WXEntryActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/request/RefreshRequest.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/request/UserRequest.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/User.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/TencentInfo.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/LoginFragment.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/Account.java" />
+        <option value="$PROJECT_DIR$/src/loginsdk/net/LoginApi.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/MangoUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/AccountManager.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/RegistFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/RetrieveFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/MGCommitDialog.java" />
+        <option value="$PROJECT_DIR$/res/values/yyh_styles.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/activity/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/yyh_dialog_login.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/GlobalUtils.java" />
+        <option value="$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml" />
+        <option value="$PROJECT_DIR$/res/layout/yyh_fragment_login.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/WXToken.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/HttpsApi.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsApi.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/bean/response/WXUserInfo.java" />
+        <option value="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/activity/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/BaseUiListener.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/OnLoginFragmentListener.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/MGLoginActivity.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/LoginApi.java" />
-        <option value="$PROJECT_DIR$/res/layout/yyh_fragment_login.xml" />
-        <option value="$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/UserInfoUiLIstener.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/ResUtils.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/LoginFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/QuickLoginFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/joyegame/ftxkos/ydmm/wxapi/WXEntryActivity.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/login/Constant.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/ServiceFactory.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/MessageType.java" />
         <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/LoginImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/example/loginsdk/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/listener/UserInfoUiLIstener.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/wxapi/WXEntryActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/listener/LoginCallback.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/HttpsUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/activity/MGLoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/AccountManager.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/MangoSdk.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/main/AccountManager.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/main/MGCommitDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/fragment/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/example/loginsdk/util/Constant.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1432" />
-    <option name="y" value="-148" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1456" />
-    <option name="height" value="916" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1208,7 +1278,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -1217,7 +1287,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="true" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -1229,18 +1299,15 @@
       <pane id="AndroidView">
         <subPane />
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="LoginSdk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1253,17 +1320,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoginSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoginSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wxapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoginSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoginSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loginsdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoginSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LoginSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loginsdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="E:/Program Files/android-sdk-windows" />
-    <property name="last_opened_file_path" value="F:/github/QQLoginDome" />
-    <property name="device.picker.selection" value="0123456789ABCDEF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/phiau.keystore" />
+    <property name="device.picker.selection" value="F8UDU16409003721" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="ExportApk.ApkPath" value="E:\mitnick.cheng\git_work\LoginSdk" />
     <property name="ExportApk.Flavors" value="" />
@@ -1273,13 +1409,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\mitnick.cheng\git_work\LoginSdk\src\com\example\loginsdk\login" />
-      <recent name="E:\mitnick.cheng\git_work\LoginSdk\src\com\example\loginsdk\util" />
-      <recent name="E:\mitnick.cheng\git_work\LoginSdk\libs" />
-      <recent name="E:\mitnick.cheng\git_work\LoginSdk\res\drawable-xhdpi" />
       <recent name="E:\mitnick.cheng\git_work\LoginSdk" />
+      <recent name="E:\mitnick.cheng\git_work\LoginSdk\res\drawable-xhdpi" />
+      <recent name="E:\mitnick.cheng\git_work\LoginSdk\res\layout" />
+      <recent name="E:\mitnick.cheng\git_work\LoginSdk\src" />
+      <recent name="E:\mitnick.cheng\git_work\LoginSdk\src\com\example\loginsdk\login" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.joyegame.ftxkos.ydmm.wxapi" />
       <recent name="com.example.loginsdk.net" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -1677,27 +1814,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1432" y="-148" width="1456" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15699208" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2827298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25358167" sideWeight="0.50527704" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1530343" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29155672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59366757" sideWeight="0.5028653" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30222842" sideWeight="0.49713466" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2896936" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47771588" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31134564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358167" sideWeight="0.49472296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358167" sideWeight="0.49472296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1325215" sideWeight="0.46351084" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1325215" sideWeight="0.5364891" order="3" side_tool="true" content_ui="tabs" />
@@ -1711,8 +1848,42 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25358167" sideWeight="0.50527704" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1530343" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1325215" sideWeight="0.5364891" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15699208" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29155672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47771588" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25358167" sideWeight="0.49472296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1325215" sideWeight="0.46351084" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1726,44 +1897,36 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="134" column="67" selection-start-line="134" selection-start-column="67" selection-end-line="134" selection-end-column="67" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/wxapi.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/MResource.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/yyh_fragment_login.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        <state relative-caret-position="194">
+          <caret line="123" column="39" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/T.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/ShowMessageFromWX.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/IWXAPI.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="247">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1774,203 +1937,235 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/SendAuth.class">
+    <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/IWXAPI.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+        <state relative-caret-position="209">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/BaseResp.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state relative-caret-position="233">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/BaseReq.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Program Files/android-sdk-windows/sources/android-23/javax/net/ssl/SSLSocketFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/MangoUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/SLSocketFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/SSLSocketFactory.java" />
-    <entry file="jar://$PROJECT_DIR$/libs/okhttp-3.4.1.jar!/okhttp3/OkHttpClient.class">
+    <entry file="jar://$PROJECT_DIR$/libs/libammsdk.jar!/com/tencent/mm/sdk/openapi/SendAuth.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="462" column="36" selection-start-line="462" selection-start-column="36" selection-end-line="462" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/mp.weixin.qq.com.crt">
+    <entry file="jar://$PROJECT_DIR$/libs/open_sdk_r5756.jar!/com/tencent/connect/common/Constants.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/rxjava-1.1.6.jar!/rx/Observer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/response/WXToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Program Files/android-sdk-windows/sources/android-23/android/content/res/AssetManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/response/WXUserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4997">
-          <caret line="285" column="29" selection-start-line="285" selection-start-column="29" selection-end-line="285" selection-end-column="29" />
+        <state relative-caret-position="-92">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsUtils.java">
+    <entry file="file://$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="29" column="99" selection-start-line="29" selection-start-column="98" selection-end-line="29" selection-end-column="99" />
+        <state relative-caret-position="74">
+          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/open_sdk_r5756.jar!/com/tencent/tauth/Tencent.class">
+    <entry file="file://$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/open_sdk_r5756.jar!/com/tencent/connect/UserInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/FragmentActivity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="216" column="19" selection-start-line="216" selection-start-column="19" selection-end-line="216" selection-end-column="19" />
+          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/ServiceFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/MResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="418" column="29" selection-start-line="418" selection-start-column="29" selection-end-line="418" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/OnLoginFragmentListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="532">
+          <caret line="28" column="70" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoginSdk-release.apk" />
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/BaseUiListener.java" />
-    <entry file="jar://$PROJECT_DIR$/libs/open_sdk_r5756.jar!/com/tencent/connect/UserInfo.class">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/ResUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="104">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/UserInfoUiLIstener.java" />
-    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/FragmentActivity.class">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="159" column="19" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
+        <state relative-caret-position="1254">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding>
+            <marker date="1473055897307" expanded="true" signature="1035:1508" ph="/*...*/" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/LoginCallback.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/TokenAuthenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="152">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/MessageType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/LoginApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/FailedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/listener/UserInfoUiLIstener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/wxapi/WXEntryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        <state relative-caret-position="461">
+          <caret line="86" column="47" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        <state relative-caret-position="-1672">
+          <caret line="338" column="67" selection-start-line="338" selection-start-column="67" selection-end-line="338" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/request/LoginRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/fragment/LoginFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/open_sdk_r5756.jar!/com/tencent/tauth/IUiListener.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/request/RefreshRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/request/UserRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/response/JsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/response/Token.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/listener/OnLoginFragmentListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/MangoSdk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="152">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/listener/LoginCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        <state relative-caret-position="152">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/response/TencentInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/listener/BaseUiListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="209">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/MD5Util.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/LoginImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="285">
+          <caret line="64" column="58" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/ServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="131" column="28" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1978,107 +2173,127 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/bean/response/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/MGLoginActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/activity/MGLoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3667">
-          <caret line="232" column="27" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
+        <state relative-caret-position="152">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/login/LoginFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/fragment/RegistFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        <state relative-caret-position="171">
+          <caret line="126" column="17" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/yyh_fragment_login_l.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/fragment/RetrieveFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="136" column="44" selection-start-line="136" selection-start-column="40" selection-end-line="136" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/yyh_fragment_login.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2451">
-          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/MessageType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="594">
+          <caret line="190" column="55" selection-start-line="190" selection-start-column="51" selection-end-line="190" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/LoginImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/fragment/QuickLoginFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3116">
-          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        <state relative-caret-position="651">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding>
-            <element signature="e#1854#1855#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/LoginApi.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/main.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/controller/AccountManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="171">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/activity/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/activity/LoginActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/fragment/BaseFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="152">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/com/joyegame/ftxkos/ydmm/wxapi/WXEntryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        <state relative-caret-position="380">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/net/HttpsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <marker date="1472557978488" expanded="true" signature="849:1318" ph="/*...*/" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/controller/MangoSdk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/controller/MGCommitDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/loginsdk/util/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>

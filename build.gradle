@@ -34,6 +34,12 @@ android {
             keyAlias "alias"
             keyPassword "cheng2016"
         }
+        comConfig{
+            storeFile file('phiau.keystore')
+            storePassword "phiau.cai"
+            keyAlias "phiau.keystore"
+            keyPassword "phiau.cai"
+        }
     }
 
     buildTypes {
@@ -49,7 +55,7 @@ android {
             //加载默认混淆配置文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //签名配置
-            signingConfig android.signingConfigs.debug
+            signingConfig android.signingConfigs.comConfig
         }
         release {
             // 不显示Log
@@ -63,7 +69,7 @@ android {
             //加载默认混淆配置文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //签名配置
-            signingConfig android.signingConfigs.release
+            signingConfig android.signingConfigs.comConfig
         }
     }
 

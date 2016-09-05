@@ -5,8 +5,11 @@ import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.bean.request.LoginRequest;
 import com.example.loginsdk.bean.response.User;
 import com.example.loginsdk.bean.request.UserRequest;
+import com.example.loginsdk.bean.response.WXToken;
+import com.example.loginsdk.bean.response.WXUserInfo;
 
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -42,6 +45,6 @@ public interface LoginApi {
     @POST("user/checkLogin")
     Observable<JsonResult> checkLogin(@Body Account account);
 
-    @POST("user/qqLogin")
-    Observable<JsonResult<Account>> qqLogin(@Query("name") String userName);
+    @POST("user/thirdLogin")
+    Observable<JsonResult<Account>> thirdLogin(@Query("name") String userName,@Query("openId") String uniqueId);
 }

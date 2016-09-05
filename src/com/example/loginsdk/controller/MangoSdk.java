@@ -1,6 +1,8 @@
-package com.example.loginsdk.login;
+package com.example.loginsdk.controller;
 
 import android.app.Activity;
+
+import com.example.loginsdk.listener.LoginCallback;
 
 /**
  * Created by mitnick.cheng on 2016/8/15.

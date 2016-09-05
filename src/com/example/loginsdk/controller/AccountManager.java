@@ -1,6 +1,8 @@
-package com.example.loginsdk.login;
+package com.example.loginsdk.controller;
 
+import com.example.loginsdk.activity.MGLoginActivity;
 import com.example.loginsdk.bean.response.User;
+import com.example.loginsdk.listener.LoginCallback;
 
 import android.app.Activity;
 
@@ -10,9 +12,6 @@ import android.app.Activity;
  */
 
 public class AccountManager {
-    public final static int PORTRAIT = 0;
-
-    public final static int LANDSCAPE = 1;
 
     private static Activity mActivity;
 

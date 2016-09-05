@@ -1,4 +1,4 @@
-package com.example.loginsdk.login;
+package com.example.loginsdk.listener;
 
 import android.support.v4.app.Fragment;
 
@@ -7,11 +7,7 @@ import android.support.v4.app.Fragment;
  */
 
 public interface OnLoginFragmentListener {
-    public void login(String account, String password);
-
     public void exit();
 
     public void startFragment(Fragment fragment);
-
-    public void qqLogin();
 }

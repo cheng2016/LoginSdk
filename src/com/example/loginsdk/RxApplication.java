@@ -3,7 +3,7 @@ package com.example.loginsdk;
 import android.app.Application;
 
 import com.example.loginsdk.util.AppUtils;
-import com.example.loginsdk.util.LogUtils;
+import com.example.loginsdk.util.L;
 
 /**
  * Created by Michael Smith on 2016/7/21.
@@ -19,7 +19,7 @@ public class RxApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-        LogUtils.isDebug = AppUtils.getBooleanMetaData(this , DEBUG_MODE);
+        L.isDebug = AppUtils.getBooleanMetaData(this , DEBUG_MODE);
     }
 
     public  synchronized static  RxApplication getInstance(){

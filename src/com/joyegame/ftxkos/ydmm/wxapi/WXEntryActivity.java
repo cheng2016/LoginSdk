@@ -1,5 +1,9 @@
-package com.example.loginsdk.wxapi;
+package com.joyegame.ftxkos.ydmm.wxapi;
 
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.util.Constant;
@@ -13,9 +17,7 @@ import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.IWXAPIEventHandler;
 import com.tencent.mm.sdk.openapi.SendAuth;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+
 import org.greenrobot.eventbus.EventBus;
 
 public class WXEntryActivity extends FragmentActivity implements IWXAPIEventHandler{
