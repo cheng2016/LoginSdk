@@ -38,7 +38,7 @@ public class ServiceFactory {
 
     public  static <T> T createRetrofit2RxJavaService(final Class<T> service,String baseUrl,Context context) {
     	Retrofit retrofit = new Retrofit.Builder()
-                .client(getCacheOkHttpClient(context))
+//                .client(getCacheOkHttpClient(context))
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(baseUrl)

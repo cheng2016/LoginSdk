@@ -21,8 +21,9 @@ import rx.Observable;
 
 public interface LoginApi {
 //    public static final String baseurl = "http://sdk.stg.ftxgame.com:8880/web-ssm/";
-//    public static final String baseurl = "http://192.168.12.22:8080/LoginServer/";
+//    public static final String baseurl = "http://192.168.12.50:8080/LoginServer/";
     public static final String baseurl = "http://sdk.stg.ftxgame.com:8880/LoginServer/";
+//        public static final String baseurl = "http://sdk.stg.ftxgame.com:8980/LoginServer/";
 
     public final static String REGIST = "regist";
     public final static String RETRIEVE = "retrieve";
