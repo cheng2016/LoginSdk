@@ -1,7 +1,9 @@
 package com.example.loginsdk.fragment;
 
+import com.example.loginsdk.bean.AppInfo;
+import com.example.loginsdk.bean.SLoginRequest;
+import com.example.loginsdk.bean.SecurityRequest;
 import com.example.loginsdk.controller.AccountManager;
-import com.example.loginsdk.bean.request.LoginRequest;
 import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.bean.response.WXUserInfo;
 import com.example.loginsdk.listener.BaseUiListener;
@@ -10,9 +12,12 @@ import com.example.loginsdk.listener.OnLoginFragmentListener;
 import com.example.loginsdk.net.FailedEvent;
 import com.example.loginsdk.net.LoginImpl;
 import com.example.loginsdk.net.MessageType;
+import com.example.loginsdk.security.AESUtils;
+import com.example.loginsdk.security.DESCoder;
+import com.example.loginsdk.security.MD5Utils;
+import com.example.loginsdk.security.RSAUtils;
 import com.example.loginsdk.util.AppUtils;
 import com.example.loginsdk.util.Constant;
-import com.example.loginsdk.util.MD5Util;
 import com.example.loginsdk.util.PreferenceConstants;
 import com.example.loginsdk.util.PreferenceUtils;
 import com.example.loginsdk.util.RegularUtils;
@@ -23,6 +28,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,6 +38,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.loginsdk.util.T;
+import com.google.gson.Gson;
 import com.tencent.connect.common.Constants;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.SendAuth;
@@ -101,8 +108,6 @@ public class LoginFragment extends BaseFragment {
 		regist = (TextView) rootView.findViewById(ResUtils.getId("regist"));
 		retrieve_password = (TextView) rootView.findViewById(ResUtils.getId("retrieve_password"));
 
-		
-		
 		userNameEdit = (EditText) rootView.findViewById(ResUtils.getId("username"));
 		passwordEdit = (EditText) rootView.findViewById(ResUtils.getId("password"));
 
@@ -129,20 +134,40 @@ public class LoginFragment extends BaseFragment {
 			@Override
 			public void onClick(View v) {
 				AppUtils.hideKeyWord(getActivity(), v);
-				String username = userNameEdit.getText().toString();
+				String phone = userNameEdit.getText().toString();
 				String password = passwordEdit.getText().toString();
-				if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
+				if (TextUtils.isEmpty(phone) || TextUtils.isEmpty(password)) {
 					T.showShort(getActivity(), "请输入账号");
 				} else if (TextUtils.isEmpty(password)) {
 					T.showShort(getActivity(), "请输入密码");
-				} else if (!RegularUtils.isMobile(username)) {
+				} else if (!RegularUtils.isMobile(phone)) {
 					T.showShort(getActivity(), "请输入正确的手机号");
 				} else {
 					showLoginDialog("登录中...");
-					PreferenceUtils.setPrefString(getActivity(), PreferenceConstants.ACCOUNT,username);
+					PreferenceUtils.setPrefString(getActivity(), PreferenceConstants.ACCOUNT,phone);
 					PreferenceUtils.setPrefString(getActivity(), PreferenceConstants.PASSWORD,password);
-					password = MD5Util.md5(password);
-					LoginImpl.getInstance(getActivity()).login(new LoginRequest(username,password));
+					password = MD5Utils.md5(password);
+
+					System.out.println("-------------客户端加密开始 RSA+DES------------");
+					AppInfo appInfo = AccountManager.getAppInfo();
+					Log.i("appInfo",new Gson().toJson(appInfo));
+					SLoginRequest sLoginRequest = new SLoginRequest(appInfo.getAppId(),appInfo.getAppKey(),phone,password);
+					String data = new Gson().toJson(sLoginRequest);
+					System.out.println("data："+data);
+					String sign = "";
+					try {
+						sign = RSAUtils.sign(data.getBytes(),appInfo.getPrivateKey());
+						System.out.println("sign："+sign);
+					}catch (Exception e){
+						e.printStackTrace();
+					}
+					String securityData = DESCoder.encrypt(data,appInfo.getAppSecret()) ;
+					System.out.println("securityData："+securityData);
+					SecurityRequest securityRequest = new SecurityRequest(appInfo.getAppId(),sign,securityData);
+					String securityStr = new Gson().toJson(securityRequest);
+					System.out.println("securityRequest："+ securityStr);
+
+					LoginImpl.getInstance(getActivity()).securityLogin(securityRequest);
 				}
 			}
 		});
@@ -231,7 +256,7 @@ public class LoginFragment extends BaseFragment {
 		if(event instanceof JsonResult){
 			dismissDialog();
 			JsonResult jsonResult = (JsonResult) event;
-			if(jsonResult.getMessage().equals("login")){
+			if(jsonResult.getMessage().equals("login") || jsonResult.getMessage().equals("securityLogin")){
 				mLoginCallback.onLoginSuccess(getActivity(),jsonResult.getData());
 				getActivity().finish();
 			}

@@ -6,8 +6,8 @@ import com.example.loginsdk.listener.OnLoginFragmentListener;
 import com.example.loginsdk.net.FailedEvent;
 import com.example.loginsdk.net.LoginApi;
 import com.example.loginsdk.net.LoginImpl;
+import com.example.loginsdk.security.MD5Utils;
 import com.example.loginsdk.util.AppUtils;
-import com.example.loginsdk.util.MD5Util;
 import com.example.loginsdk.util.MResource;
 import com.example.loginsdk.util.RegularUtils;
 import com.example.loginsdk.util.ResUtils;
@@ -123,7 +123,7 @@ public class RegistFragment extends BaseFragment {
                     T.showShort(getActivity(),"二次密码不一致");
                 }else{
                     showProgressDialog("注册中...");
-                    passwordStr = MD5Util.md5(passwordStr);
+                    passwordStr = MD5Utils.md5(passwordStr);
                     LoginImpl.getInstance(getActivity()).regist(token,new UserRequest(phoneStr,passwordStr,verifyCodeStr));
                 }
             }

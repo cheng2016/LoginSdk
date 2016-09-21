@@ -1,6 +1,7 @@
 package com.example.loginsdk.net;
 
 import com.example.loginsdk.bean.Account;
+import com.example.loginsdk.bean.SecurityRequest;
 import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.bean.request.LoginRequest;
 import com.example.loginsdk.bean.response.User;
@@ -21,9 +22,9 @@ import rx.Observable;
 
 public interface LoginApi {
 //    public static final String baseurl = "http://sdk.stg.ftxgame.com:8880/web-ssm/";
-//    public static final String baseurl = "http://192.168.12.50:8080/LoginServer/";
-    public static final String baseurl = "http://sdk.stg.ftxgame.com:8880/LoginServer/";
-//        public static final String baseurl = "http://sdk.stg.ftxgame.com:8980/LoginServer/";
+//    public static final String baseurl = "http://192.168.12.72:8080/LoginServer/";
+      public static final String baseurl = "http://sdk.stg.ftxgame.com:8880/LoginServer/";
+//    public static final String baseurl = "http://sdk.stg.ftxgame.com:8980/LoginServer/";
 
     public final static String REGIST = "regist";
     public final static String RETRIEVE = "retrieve";
@@ -48,4 +49,7 @@ public interface LoginApi {
 
     @POST("user/thirdLogin")
     Observable<JsonResult<Account>> thirdLogin(@Query("name") String userName,@Query("openId") String uniqueId);
+
+    @POST("user/securityLogin")
+    Observable<JsonResult<Account>> securityLogin(@Body SecurityRequest securityRequest);
 }

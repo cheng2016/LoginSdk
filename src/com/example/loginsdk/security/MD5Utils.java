@@ -1,21 +1,31 @@
-package com.example.loginsdk.util;
+package com.example.loginsdk.security;
 
 import java.security.MessageDigest;
+import java.util.Random;
 
 /**
  * Created by mitnick.cheng on 2016/8/18.
  */
-public class MD5Util {
-    private static final String encryModel="MD5";
+public class MD5Utils {
+    private static final String encryModel = "MD5";
+
+    public static void main(String[] args) {
+        String content = "this is a test";
+        System.out.println(md5(content));
+//        System.out.println(new Random().nextInt(5));
+    }
+
     /**
      * 32λmd5.
      * 32位小写md5加密
+     *
      * @param str
      * @return
      */
     public static String md5(String str) {
         return encrypt(encryModel, str);
     }
+
     public static String encrypt(String algorithm, String str) {
         try {
             MessageDigest md = MessageDigest.getInstance(algorithm);

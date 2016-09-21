@@ -3,6 +3,7 @@ package com.example.loginsdk.net;
 import org.greenrobot.eventbus.EventBus;
 
 import com.example.loginsdk.bean.Account;
+import com.example.loginsdk.bean.SecurityRequest;
 import com.example.loginsdk.bean.response.JsonResult;
 import com.example.loginsdk.bean.request.LoginRequest;
 import com.example.loginsdk.bean.request.UserRequest;
@@ -275,6 +276,32 @@ public class LoginImpl {
                     @Override
                     public void onNext(WXUserInfo wxUserInfo) {
                         postEvent(wxUserInfo);
+                    }
+                });
+    }
+
+    public void securityLogin(SecurityRequest securityRequest){
+        getApiClient().securityLogin(securityRequest)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<JsonResult<Account>>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        postEvent(new FailedEvent(MessageType.LOGIN ,throwable.getMessage()));
+                    }
+
+                    @Override
+                    public void onNext(JsonResult<Account> jsonResult) {
+                        if(jsonResult.isSuccess()){
+                            postEvent(jsonResult);
+                        }else{
+                            postEvent(new FailedEvent(MessageType.LOGIN ,jsonResult.getMessage()));
+                        }
                     }
                 });
     }
