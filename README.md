@@ -4,6 +4,10 @@
 ![](screenshort/2016-08-25-18-32-10.png)   
 
 
+# 声明
+
+禁止一切商业目的的使用！否则后果自负.
+
 # License
 
     Copyright 2016 cheng2016,Inc.
